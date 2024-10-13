@@ -1,3 +1,4 @@
+import "./main.css";
 import loadHomepage from "./load-homepage.js";
 import loadMenu from "./load-menu.js";
 import loadContact from "./load-contact.js";
@@ -21,6 +22,9 @@ function switchTab(tab) {
     default:
       break;
   }
+
+  document.querySelector(".tab-switch:disabled")?.toggleAttribute('disabled');
+  document.querySelector(`[value="${tab}"]`).disabled = true;
 };
 
 function addListenersToTabButtons() {
@@ -32,5 +36,5 @@ function addListenersToTabButtons() {
   }
 };
 
-loadHomepage();
+switchTab("homepage");
 addListenersToTabButtons();
