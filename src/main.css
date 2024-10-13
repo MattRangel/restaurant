@@ -1,0 +1,23 @@
+header > nav {
+  display: flex;
+  height: 4rem;
+}
+
+.tab-switch {
+  background-color: firebrick;
+  border: none;
+  flex: 1;
+}
+
+.tab-switch:hover {
+  cursor: pointer;
+}
+
+.tab-switch:active, .tab-switch:disabled {
+  background-color: indianred;
+}
+
+.tab-switch:disabled {
+  cursor: default;
+  color: black;
+}
